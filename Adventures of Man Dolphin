@@ -1,20 +1,3 @@
-def start():
-  # give some prompts.
-  input("\n Man Dolphin is bacK!.")
-  print("Man Dolphin made cookies as a peace offering. Do you accept or decline?  (a or d)")
-  
-  # convert the player's input() to lower_case
-  answer = input(">").lower()
-
-  if "a" in answer:
-    # if player typed "left" or "a" lead him to game_over()
-    game_over("You have been poisoned by Man Dolphin.")
-  elif "d" in answer:
-    # else if player typed "right" or "d" lead him to decline_cookie()
-    decline_cookie()
-  else:
-    # else call game_over() function with the "reason" argument
-    game_over("Don't you know how to type something properly?")
 def decline_cookie():  
     print("\n Man Dolphin is sorry for killing you.")
     print("Do you accept or decling his apology?  (a or d)")
@@ -93,15 +76,67 @@ def running_from_man_dolphin():
   else:
     # else call game_over() function with the "reason" argument
     game_over("Don't you know how to type something properly?")
+
 def left_maze():
   print("\n You take a left and come across Man Mantis.")
   print("Ignore or Ask for Help?  (i or a)")
   answer = input(">").lower()
   
   if "i" in answer:
-    game_over("To be Continued")
+    game_over("Man Dolphin found you... Unspeakable horros unfold upon you.")
   elif "a" in answer:
-    game_over("To be Continued")
+    Ask_for_help()
+  else:
+    # else call game_over() function with the "reason" argument
+    game_over("Don't you know how to type something properly?") 
+
+def Ask_for_help():
+  print("\n Man Mantis tells you there is a secret escape path out the maze.")
+  print("Go there or keep running  (g or k)")
+  answer = input(">").lower()
+  
+  if "g" in answer:
+    go_there()
+  elif "k" in answer:
+    game_over("You keep running and then fell off a mountain.")
+  else:
+    # else call game_over() function with the "reason" argument
+    game_over("Don't you know how to type something properly?") 
+def go_there():
+  print("\n You successfully outran Man Dolphin (for now). Man Mantis offers you a safe place for hiding.")
+  print("Go with him or refuse  (g or r)")
+  answer = input(">").lower()
+  
+  if "g" in answer:
+    go_with_him()
+  elif "r" in answer:
+    game_over("Man Mantis decide to leave you. You got lost and died of starvation.")
+  else:
+    # else call game_over() function with the "reason" argument
+    game_over("Don't you know how to type something properly?") 
+def go_with_him():
+  print("\n Congrats! Level one complete!")
+  answer = input(">").lower()
+
+  if isnull(answer) != True:
+    Level_two()
+  else:
+    # else call game_over() function with the "reason" argument
+    game_over("Don't you know how to type something properly?")
+def Level_two():
+  print("\n Man Mantis takes you to his secret hiding spot. There you meet two new allies. How do you greet them?")
+  print("Hi!)
+  print("Whuddup.")
+  print("ewwwwwww...")
+  print("(h,w,or e)")
+  answer = input(">").lower()
+  
+  if "h" in answer:
+    go_with_him()
+  elif "w" in answer:
+    game_over("Man Mantis decide to leave you. You got lost and died of starvation.")
+  elif "e" in answer:
+    game_over("Man Mantis decide to leave you. You got lost and died of starvation.")
   else:
     # else call game_over() function with the "reason" argument
     game_over("Don't you know how to type something properly?") 
@@ -125,4 +160,3 @@ def play_again():
   else:
     # if user types anything besides "yes" or "y", exit() the program
     exit()
- 
