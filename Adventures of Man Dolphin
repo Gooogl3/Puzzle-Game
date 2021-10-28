@@ -15,24 +15,21 @@ def start():
   else:
     # else call game_over() function with the "reason" argument
     game_over("Don't you know how to type something properly?")
-
-
-decline_cookie()  
-  input("\n Man Dolphin is sorry for killing you.")
-  print("Do you accept or decling his apology?  (a or d)")
+def decline_cookie():  
+    print("\n Man Dolphin is sorry for killing you.")
+    print("Do you accept or decling his apology?  (a or d)")
   
   # convert the player's input() to lower_case
-  answer = input(">").lower()
-  
-  if "a" in answer:
-    accept_apology()
-  elif "d" in answer:
-    game_over("Man Dolphin is offended and kills you.")
-  else:
+    answer = input(">").lower()
+    if "a" in answer:
+        accept_apology()
+    elif "d" in answer:
+        game_over("Man Dolphin is offended and kills you.")
+    else:
     # else call game_over() function with the "reason" argument
-    game_over("Don't you know how to type something properly?")  
-    
-def accept_apology()
+        game_over("Don't you know how to type something properly?") 
+        
+def accept_apology():
   input("\n Man Dolphin has invited you to his birthday party.")
   print("Do you go or don't goy?  (g or d)")
   answer = input(">").lower()
@@ -43,11 +40,10 @@ def accept_apology()
     game_over("Man Dolphin is offended and kills you.")
   else:
     # else call game_over() function with the "reason" argument
-    game_over("Don't you know how to type something properly?")    
-   
-
-def go_party()
-  input("\n What do you choose to give Man Dolphin?.")
+    game_over("Don't you know how to type something properly?") 
+    
+def go_party():
+  print("\n What do you choose to give Man Dolphin?.")
   print("Cake, Shirt, or book?  (c, s, or b)")
   answer = input(">").lower()
   
@@ -60,10 +56,9 @@ def go_party()
   else:
     # else call game_over() function with the "reason" argument
     game_over("Don't you know how to type something properly?") 
-    
-def shirt()
+def shirt():
   input("\n Man Dolphin doesn't like your gift.")
-  print("Do you apologize or tell him "get over himself?"  (a or g)")
+  print("Do you apologize or tell him get over himself?  (a or g)")
   answer = input(">").lower()
   
   if "a" in answer:
@@ -73,11 +68,10 @@ def shirt()
   else:
     # else call game_over() function with the "reason" argument
     game_over("Don't you know how to type something properly?")    
-   
-   
-def apologize()
+     
+def apologize():
   input("\n Man Dolphin demands you to get a better gift or else.")
-  print("Do you refuse or RUN!!!?" (d or r)")
+  print("Do you refuse or RUN!!!? (d or r)")
   answer = input(">").lower()
   
   if "d" in answer:
@@ -87,10 +81,9 @@ def apologize()
   else:
     # else call game_over() function with the "reason" argument
     game_over("Don't you know how to type something properly?")  
-
-def running_from_man_dolphin()
-  input("\n Man Dolphin is now chasing you. You come across a maze.")
-  print("Left or Right?"  (l or r)")
+def running_from_man_dolphin():
+  print("\n Man Dolphin is now chasing you. You come across a maze.")
+  print("Left or Right?  (l or r)")
   answer = input(">").lower()
   
   if "l" in answer:
@@ -99,11 +92,10 @@ def running_from_man_dolphin()
     game_over("You fell down a hill into a pit of spikes?")
   else:
     # else call game_over() function with the "reason" argument
-    game_over("Don't you know how to type something properly?")  
-    
-def left_maze()
-  input("\n You take a left and come across Man Mantis.")
-  print("Ignore or Ask for Help?"  (i or a)")
+    game_over("Don't you know how to type something properly?")
+def left_maze():
+  print("\n You take a left and come across Man Mantis.")
+  print("Ignore or Ask for Help?  (i or a)")
   answer = input(">").lower()
   
   if "i" in answer:
@@ -112,10 +104,8 @@ def left_maze()
     game_over("To be Continued")
   else:
     # else call game_over() function with the "reason" argument
-    game_over("Don't you know how to type something properly?")  
-
-
-
+    game_over("Don't you know how to type something properly?") 
+    
 def game_over(reason):
   # print the "reason" in a new line (\n)
   print("\n" + reason)
@@ -123,7 +113,6 @@ def game_over(reason):
   # ask player to play again or not by activating play_again() function
   play_again()
   # function to ask play again or not
-
 def play_again():
   print("\nDo you want to play again? (y or n)")
   
@@ -136,3 +125,4 @@ def play_again():
   else:
     # if user types anything besides "yes" or "y", exit() the program
     exit()
+ 
